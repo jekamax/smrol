@@ -5,6 +5,33 @@
     <title>рулетка</title>
   </head>
   <body>
-   <h2>окопная рулетка</h2>
+   <h3>окопная рулетка</h3>
+   <img id="pict" src="rol.jpg"/>
+   <img src="dead.jpg" hidden />
+   <div id="screen" >
+   </div>
+   
+   <input id="but" value="крутануть и стрельнуть" onclick="go()" type="button">
+   <script>
+   var count=1;
+	function go()
+	{
+	        shot=Math.random()*5+1
+			if(shot>5)
+			{
+				scr='<h1>Не куришь до конца дня!</h1>'
+				document.getElementById('pict').src="dead.jpg";
+				document.getElementById('but').style.display = 'none'
+				
+			}
+			else
+			{
+				scr="<h4>Выиграл "+count+". Может еще раз?..</h4>"
+			}
+			document.getElementById('screen').innerHTML=scr
+			count++
+	}
+   </script>
+   
   </body>
 </html>
