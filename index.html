@@ -7,8 +7,8 @@
   </head>
   <body>
    <h3>окопная рулетка</h3>
-   <img id="pict" src="rol.jpg"/>
    <img src="dead.jpg" hidden />
+   <img id="pict" src="rol.jpg"/>
    <div id="screen" >
    </div>
    
@@ -18,11 +18,12 @@
 	function go()
 	{
 	        shot=Math.random()
-			if(shot>0.7)
+			console.log(shot);
+			if(shot > 0.8)
 			{
 				scr='<h1>Не куришь до конца дня!</h1>'
 				document.getElementById('pict').src="dead.jpg";
-				document.getElementById('but').style.display = 'none'
+			//	document.getElementById('but').style.display = 'none'
 				
 			}
 			else
